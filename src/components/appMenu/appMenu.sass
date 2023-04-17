@@ -1,0 +1,46 @@
+@import '../../style/variables.sass'
+    
+.menu
+    width: 100%
+    height: 60px
+    position: fixed
+    top: 0
+    margin: 0 auto
+    background: #fff
+    border-bottom: 1px rgba(63, 78, 101, 0.2) solid
+    z-index: 3
+    &__wrap
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 100%
+    &__links, &__items
+        display: flex
+        list-style: none
+        justify-content: space-between
+        gap: 60px
+    &__links
+        gap: 40px
+    &__link
+        display: flex
+        gap: 15px
+        img
+            width: 20px
+        a
+            text-decoration: none
+            color: $first-text-color
+            font-weight: 600
+            font-size: 14px
+            line-height: 18px
+            span
+                color: $second-text-color
+                font-weight: 300
+                font-size: 12px
+                line-height: 16px
+    &__item
+        a
+            color: $second-text-color
+            font-weight: 400
+            font-size: 14px
+            line-height: 21px
+

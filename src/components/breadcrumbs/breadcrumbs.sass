@@ -1,0 +1,17 @@
+@import '../../style/variables'
+.breadcrumbs
+    padding-top: 215px
+    &__list
+        display: flex
+    &__item
+        padding: 0 10px
+        border-right: 1px dashed rgba(63, 78, 101, 0.3)
+        font-weight: 300
+        font-size: 14px
+        line-height: 120%
+        color: $second-text-color
+        cursor: pointer
+        &:last-child
+            border: none
+.current
+    opacity: 0.5

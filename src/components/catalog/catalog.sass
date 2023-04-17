@@ -1,0 +1,98 @@
+@import '../../style/variables'
+
+.catalog
+    margin: 50px auto 100px auto
+    &__head
+        display: flex
+        justify-content: space-between
+    &__title
+        font-weight: 500
+        font-size: 40px
+        line-height: 120%
+        text-transform: uppercase
+        color: $first-text-color
+    &__categories
+        margin-top: 25px
+        display: flex
+        height: 70px
+        gap: 11px
+        &-item
+            padding: 18px 15px
+            font-weight: 400
+            font-size: 14px
+            line-height: 17px
+            text-align: center
+            color: $second-text-color
+    &__sort
+        position: relative
+        display: grid
+        cursor: pointer
+        align-items: center
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+        color: $second-text-color
+        &-title
+            grid-column: 1
+            grid-row: 2
+            font-weight: 500
+            color: $first-text-color
+            padding-right: 5px
+        &::after
+            content: ""
+            display: grid
+            width: 0.8em
+            height: 0.5em
+            background-color: $second-text-color
+            clip-path: polygon(100% 0%, 0 0%, 50% 100%)
+            grid-template-areas: "select"
+            justify-self: end
+            grid-area: select
+    &__wrap
+        display: flex
+        margin-top: 50px
+        gap: 100px
+    &__body
+        display: flex
+        flex-direction: column
+        width: calc( 100% - 238px )
+    &__items
+        display: flex
+        flex-wrap: wrap
+    &__pages
+        margin: 50px auto 0 auto
+        display: flex
+        gap: 20px
+        &-prev, &-next
+            cursor: pointer
+            background: none
+            border: none
+        &-wrap
+            display: flex
+            gap: 21px
+    &__page
+        font-weight: 500
+        font-size: 14px
+        line-height: 130%
+        text-align: center
+        color: $second-text-color
+        cursor: pointer
+        &_current
+            position: relative
+            display: flex
+            align-items: center
+            justify-content: center
+            &::before
+                content: ''
+                position: absolute
+                z-index: -1
+                width: 35px
+                height: 35px
+                background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%)
+                border-radius: 100%
+    &__bottom
+        margin-top: 68px
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        color: $second-text-color

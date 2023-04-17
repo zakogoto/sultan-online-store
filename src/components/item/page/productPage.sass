@@ -1,0 +1,106 @@
+@import '../../../style/variables'
+
+.card
+    width: 100%
+    padding: 65px 0 80px 0
+    &__wrap
+        display: flex
+        gap: 40px
+    &__info
+        padding-top: 40px
+    &__img
+        width: 600px
+    &__about
+        display: flex
+        flex-direction: column
+        gap: 20px
+        position: relative
+        padding: 30px 0 20px 0
+        &-item
+            font-weight: 500
+            font-size: 16px
+            line-height: 150%
+            color: $first-text-color
+        &-title
+            display: flex
+    &__status
+        font-weight: 500
+        font-size: 14px
+        line-height: 130%
+        margin-bottom: 10px
+    &__name
+        text-transform: lowercase
+        font-weight: 400
+        font-size: 30px
+        line-height: 150%
+        color: $first-text-color
+        span
+            text-transform: capitalize
+            font-weight: 800
+    &__cart
+        margin-top: 25px
+        display: flex
+        align-items: center
+        gap: 40px   
+    &__price
+        font-weight: 800
+        font-size: 30px
+        line-height: 130%
+        color: $first-text-color
+    &__options
+        display: flex
+        margin-top: 20px
+        height: 77px
+        gap: 10px
+    &__option
+        padding: 0 35px
+        display: flex
+        align-items: center
+        height: 100%
+        width: max-content
+        text-align: center
+        &:first-child
+            padding: 0 25px
+    &__pricelist
+        color: $first-text-color
+        font-weight: 700
+        font-size: 14px
+        line-height: 17px
+        display: flex
+        gap: 10px
+        &::after
+            content: url("../../../resources/img/download-logo.svg")
+    &__shiping
+        font-weight: 400
+        font-size: 14px
+        line-height: 17px
+        color: #3F4E65
+        span
+            font-weight: 700
+    &__description
+        margin-top: 15px
+        font-weight: 300
+        font-size: 12px
+        line-height: 150%
+        color: $second-text-color
+    &__specifications
+        margin-top: 15px
+        display: flex
+        flex-direction: column
+        gap: 5px
+        li
+            font-weight: 500
+            font-size: 14px
+            line-height: 150%
+            color: $first-text-color
+            span
+                font-weight: 300
+                color: $second-text-color
+.divider
+    width: 283px
+    height: 0px
+    bottom: 0
+    opacity: 0.2
+    border: 1px dashed $second-text-color
+.avalible
+    color: #1FD85D

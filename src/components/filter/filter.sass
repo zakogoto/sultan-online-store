@@ -1,0 +1,136 @@
+@import '../../style/variables'
+
+.filter
+    width: 238px
+    display: flex
+    flex-direction: column
+    transition: 0.6s ease
+    &__title
+        font-weight: 500
+        font-size: 16px
+        line-height: 150%
+        color: #111111
+    &__price
+        margin-top: 10px
+        &-title
+            display: block
+            font-weight: 300
+            font-size: 14px
+            line-height: 150%
+            color: $second-text-color
+            span
+                padding-left: 5px
+                font-weight: 500
+                color: $first-text-color
+        &-inputs
+            margin-top: 15px
+            display: flex
+            align-items: center
+            gap: 10px
+            span, input
+                font-weight: 300
+                font-size: 12px
+                line-height: 15px
+                text-align: center
+                color: $second-text-color
+            input
+                width: 100px
+                height: 23px
+                padding: 4px 14px
+                border: none
+                background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%)
+                border-radius: 100px
+    &__items
+        display: flex
+        flex-direction: column
+        margin-top: 30px
+        gap: 20px
+    &__item
+        padding-bottom: 20px
+        border-bottom: 1px dashed rgba(63, 78, 101, 0.3)
+        &:last-child, &:nth-child(2)
+            border: none
+        &-input
+            margin-top: 15px
+        &-parameters
+            margin-top: 15px
+            font-weight: 400
+            font-size: 14px
+            line-height: 150%
+            color: $second-text-color
+        &-more
+            margin-top: 15px
+    &__btns
+        display: flex
+        gap: 10px
+    &__type
+        &-title
+            font-weight: 500
+            font-size: 16px
+            line-height: 150%
+            text-transform: uppercase
+            color: $first-text-color
+        &-items
+            margin-top: 15px
+            display: flex
+            flex-direction: column
+            gap: 10px
+        &-item
+            font-weight: 400
+            font-size: 14px
+            line-height: 150%
+            color: $second-text-color
+// .custom-checkbox
+//     position: absolute
+//     // z-index: -1
+//     opacity: 0
+//     cursor: pointer
+//     &+label
+//         width: 100%
+//         display: flex
+//         gap: 10px
+        // justify-content: space-between
+        // align-items: center
+    //     user-select: none
+    //     &:before
+    //         content: ''
+    //         display: inline-block
+    //         width: 10px
+    //         height: 10px
+    //         flex-shrink: 0
+    //         flex-grow: 0
+    //         border: 0.5px solid $second-text-color
+    //         border-radius: 2px
+    //         background-repeat: no-repeat
+    //         background-position: center center
+    //         background-size: 50% 50%
+    //         cursor: pointer
+    // &:checked
+    //     &+label
+    //         &::before
+    //             border-color: $second-text-color
+    //             // background-color: $main-color
+    //             background-image: url("../../resources/img/add.svg")
+    // &:not(:disabled)
+    //     &:not(:checked)
+    //         &+label
+    //             &:hover
+    //                 &::before
+    //                     border-color: $second-text-color
+    //     &:active
+    //         &+label
+    //             &::before 
+    //                 background-color: $second-text-color
+    //                 border-color: $second-text-color
+    // &:focus
+    //     &+label
+    //         &::before
+    //             box-shadow: 0 0 0 0.2rem rgba(206, 183, 135, .25)
+    //     &:not(:checked)
+    //         &+label
+    //             &::after
+    //                 border-color: $second-text-color
+    // &:disabled
+    //     &+label
+    //         &::before
+    //             background-color: $second-text-color

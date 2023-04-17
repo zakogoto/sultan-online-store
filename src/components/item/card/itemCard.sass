@@ -1,0 +1,51 @@
+@import '../../../style/variables'
+
+.item
+    width: 326px
+    height: 490px
+    padding: 49px 49px 29px 23px
+    background: #FFFFFF
+    // box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.1)
+    border-radius: 10px
+    display: flex
+    flex-direction: column
+    text-align: left
+    &:hover
+        box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.2)
+    &-img
+        height: 194px
+        object-fit: contain
+        img
+            height: 100px
+    &__name
+        font-weight: 500
+        font-size: 16px
+        line-height: 21px
+        color: $first-text-color
+        margin: 10px 0 20px 0
+        cursor: pointer
+        span
+            font-weight: 800
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 5px
+    &__barecode, &__manufacturer, &__brand
+        font-weight: 500
+        font-size: 14px
+        line-height: 21px
+        color: $first-text-color
+        span
+            color: $second-text-color
+            font-weight: 300
+    &__bottom
+        margin-top: 15px
+        display: flex
+        align-items: center
+        justify-content: space-between
+    &__price
+        font-weight: 800
+        font-size: 16px
+        line-height: 21px
+        color: $first-text-color
+

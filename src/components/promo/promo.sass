@@ -1,0 +1,41 @@
+@import '../../style/variables'
+
+.promo
+    background: url('../../resources/img/promo-bg.png') center (center / cover) no-repeat
+    min-height: 796px
+    padding: 268px 0 94px 0
+    &__title
+        font-weight: 500
+        font-size: 70px
+        line-height: 77px
+        color: #FFFFFF
+    &__subtitle
+        font-weight: 800
+        font-size: 30px
+        line-height: 45px
+        text-transform: uppercase
+        color: #FFFFFF
+        margin: 40px 0 60px 0
+    &__benefits
+        display: flex
+        gap: 35px
+        margin-top: 90px
+    &__benefit
+        display: flex
+        align-items: center
+        font-weight: 400
+        font-size: 14px
+        line-height: 21px
+        color: #FFFFFF
+        gap: 10px
+        span
+            font-weight: 700
+        &::before
+            content: '+'
+            font-weight: 800
+            width: 40px
+            height: 40px
+            background: $main-color
+            border-radius: 100%
+            text-align: center
+            line-height: 40px

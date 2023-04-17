@@ -1,0 +1,60 @@
+@import '../../style/variables'
+.cart
+    margin-top: 50px
+    &__title
+        font-weight: 500
+        font-size: 40px
+        line-height: 120%
+        text-transform: uppercase
+        color: #111111
+    &__wrap
+        margin-top: 50px
+        padding: 50px 0
+        display: flex
+        flex-direction: column
+        width: 100%
+        border-top: 1px dashed $second-text-color
+    &__price
+        font-weight: 700
+        font-size: 30px
+        line-height: 130%
+        color: #111111
+    &__order
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+    &__subtitle
+        padding-bottom: 50px
+        font-weight: 700
+        font-size: 25px
+        line-height: 36px
+        color: $first-text-color
+        border-bottom: 1px dashed $second-text-color
+    &-item
+        border-bottom: 1px dashed $second-text-color
+        padding: 50px 0
+        display: flex
+        justify-content: space-between
+        align-items: center
+        &__title
+            font-weight: 700
+            font-size: 30px
+            line-height: 36px
+            color: $first-text-color
+            cursor: pointer
+        &__descr
+            font-weight: 300
+            font-size: 12px
+            line-height: 150%
+            color: $second-text-color
+        &__about
+            display: flex
+            flex-direction: column
+            gap: 10px
+            width: 480px
+        &__img
+            width: 280px
+            height: 190px
+            text-align: center
+            img
+                height: 100%

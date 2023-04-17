@@ -1,0 +1,32 @@
+@import '../../style/variables'
+
+.category-item
+    display: block
+    width: 250px
+    height: 250px
+    cursor: pointer
+    border-radius: 10px
+    &:hover
+        box-shadow: 0px 14px 39px -11px rgba(0, 0, 0, 0.3)
+    &__link
+        height: 100%
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        gap: 20px
+        color: $first-text-color
+        font-weight: 500
+        font-size: 16px
+        line-height: 21px
+    &__img
+        overflow: hidden
+        background: #FFFFFF
+        border-radius: 20px
+    &__title
+        padding: 10px 0
+        font-style: normal
+        font-weight: 500
+        font-size: 16px
+        line-height: 130%
+        text-align: center

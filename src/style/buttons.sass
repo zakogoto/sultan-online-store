@@ -1,0 +1,48 @@
+@import './variables'
+.btn
+    width: 192px
+    height: 60px
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    padding: 10px 19px
+    gap: 12px
+    border-radius: 79px
+    border: none
+    background: $main-color
+    font-weight: 700
+    font-size: 14px
+    line-height: 17px
+    color: #FFFFFF
+    text-transform: capitalize
+    cursor: pointer
+    &:hover
+        background: #ffc85ecc
+    &_item
+        width: 153px
+        height: 45px
+        font-size: 10px
+        line-height: 12px
+    &_big
+        width: 343px
+        height: 90px
+        font-size: 18px
+        line-height: 22px
+    &_footer
+        width: 214px
+        height: 60px
+        font-size: 14px
+        line-height: 17px
+    &_submit
+        width: 169px
+    &_cancel
+        width: 60px
+        position: relative
+        &::after
+            content: url('../resources/img/delete-logo.svg')
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 16px
+            height: 16px
