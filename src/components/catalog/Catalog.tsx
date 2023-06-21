@@ -1,4 +1,4 @@
-import { useEffect, FC, useMemo, ButtonHTMLAttributes, useState } from 'react';
+import { useEffect, FC, useMemo } from 'react';
 
 import { useActions } from '../../hooks/useActions';
 import { useAppSelector } from '../../hooks/redux';
@@ -16,11 +16,10 @@ import { IFilter } from '../../store/models/Ifilter';
 
 const Catalog: FC = () => {
     
-    const { filters: newFilters, page, limit, sort} = useAppSelector(state =>  state.catalog)
+    const { filters: newFilters, page, limit, sort} = useAppSelector(state =>  state.catalog);
+    const {filters} = useAppSelector(state => state);
 
-    const {filters} = useAppSelector(state => state)
-
-    const {setPage, applyFilters, clearFilter} = useActions()
+    const {setPage, applyFilters, clearFilter} = useActions();
 
     const queryParams = useMemo(() => ({ 
         page, limit, sortKey: sort.name, sortOrder: sort.order 
@@ -31,7 +30,7 @@ const Catalog: FC = () => {
         manufacturers: newFilters.manufacturers,
         minPrice: newFilters.minPrice,
         maxPrice: newFilters.maxPrice,
-    }), [newFilters]);
+    }), [newFilters, filters, clearFilter, applyFilters]);
 
     // const {
     //     data: allProducts, 
@@ -43,12 +42,14 @@ const Catalog: FC = () => {
         isError: filteredProductsError, 
         isLoading: filteredProductsLoading, 
         refetch,
+        isSuccess: filteredProductsSuccess
     } = productAPI.useFetchFilteredProductsQuery({
         ...queryParams, 
         ...filterCriteria
     },
-    {refetchOnMountOrArgChange: true}
-    )
+    {
+        // refetchOnMountOrArgChange: true,
+    })
 
     const {
        data: allFilteredProducts,
@@ -77,44 +78,48 @@ const Catalog: FC = () => {
     }, [totalPages]);
 
     const handleApplyFilters = (e: React.MouseEvent<HTMLButtonElement>) => {
-        // e.preventDefault()
         e.stopPropagation()
         applyFilters(filters)
         setPage(1);
-        refetch();
-        // console.log(currentData)
-        // console.log()
+        scrollUp();
+        console.log('apply')
+        console.log(filterCriteria)
     };
     
     const handleClearFilters = (e: React.MouseEvent<HTMLButtonElement>) => {
-        // e.preventDefault()
-        e.stopPropagation()
+        e.stopPropagation();
         clearFilter();
+        applyFilters(filters);
+        setPage(1);
+        scrollUp();
+        console.log(filterCriteria)
+        console.log('clear')
     }
 
     const itemsToShow = useMemo(() => {
 
-          if (filteredProducts && filteredProducts.length > 0) {
-            return filteredProducts;
+        if (filteredProducts && filteredProducts.length > 0) {
+        return filteredProducts;
 
-          } else if (isSuccess && allFilteredProducts && allFilteredProducts.length === 0) {
-            return [];
+        } else if (isSuccess && allFilteredProducts && allFilteredProducts.length === 0) {
+        return [];
 
-          } else if (filters && Object.values(filters).some(Boolean)) {
-            return [];
-
-          } 
+        }
     },
-        [filteredProducts, allFilteredProducts, filters, clearFilter]
+        [filteredProducts, allFilteredProducts, filters.isClearFilter, clearFilter]
     );
     
     const itemsOnPage = itemsToShow;
 
     useEffect(()=> {
         scrollUp()
-    }, [setPage])
+    }, [page])
 
-    
+    // const testButton = () => {
+    //     applyFilters(filters)
+    //     setPage(1);
+    // }
+
     return (
         <>
             <section className='catalog'>
@@ -126,6 +131,7 @@ const Catalog: FC = () => {
                     <ol className="catalog__categories">
                         <li className='catalog__categories-item'>Уход<br /> за телом</li>
                         <li className='catalog__categories-item'>Уход<br /> за руками</li>
+                        {/* <button onClick={() => testButton()}>click</button> */}
                     </ol>
                     <div className="catalog__wrap">
                         {allFilteredProducts && <Filter onClearFilter={handleClearFilters} onSubmit={handleApplyFilters} products={allFilteredProducts}/>}

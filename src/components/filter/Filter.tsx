@@ -41,9 +41,9 @@ const Filter: FC<filterProps> = ({products, onSubmit, onClearFilter}) => {
             <form action="#" className="filter__price">
                 <p className="filter__price-title">Цена<span>₸</span></p>
                 <div className="filter__price-inputs">
-                    <input onChange={(e) => setMinPrice(+e.target.value)} type="text" name="lowPrice" id="startPrice" placeholder='0'/>
+                    <input onChange={(e) => setMinPrice(+e.target.value)} value={minPrice ? minPrice : ''} type="text" name="lowPrice" id="minPriceInput" placeholder='0'/>
                     <span>-</span>
-                    <input onChange={(e) => setMaxPrice(+e.target.value)} type="text" name="HighPrice" id="stopPrice" placeholder='10000'/>
+                    <input onChange={(e) => setMaxPrice(+e.target.value)} value={maxPrice ? maxPrice : ''} type="text" name="HighPrice" id="maxPriceInput" placeholder='10000'/>
                     {/* <input {...lowPriceBind} type="text" name="lowPrice" id="startPrice" placeholder='0'/>
                     <span>-</span>
                     <input {...HigthPriceBind} type="text" name="HighPrice" id="stopPrice" placeholder='10000'/> */}

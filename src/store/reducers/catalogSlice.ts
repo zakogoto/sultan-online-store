@@ -24,7 +24,7 @@ export const catalogSlice = createSlice({
     reducers: {
         applyFilters: (state: ICatalog, action: PayloadAction<IFilter>) => {
             state.filters = action.payload;
-            console.log(state.filters)
+            // console.log(state.filters)
           },
         setSort: (state: ICatalog, action: PayloadAction<{name: string, order: string}>) => {
             state.sort.name = action.payload.name;

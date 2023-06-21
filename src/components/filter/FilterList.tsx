@@ -30,7 +30,10 @@ const FilterList: FC<FilterListProps> = ({title, parameters, type}) => {
                     {firstFourParams.map(parameter => 
                         <FilterListItem type={type} count={parameter.count} key={parameter.name} name={parameter.name} />
                     )}
-                <Dropdown children={dropdownChildren} title={'показать все'} />
+                {parameters.length > 4 
+                    ? <Dropdown children={dropdownChildren} title={'показать все'} /> 
+                    : null
+                }
             {/* </form> */}
                 </ul>
         </div>

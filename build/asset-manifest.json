@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.89fc971c.css",
+    "main.js": "/static/js/main.b6ef2787.js",
+    "static/media/promo-bg.png": "/static/media/promo-bg.2ca21db932206e0de4c4.png",
+    "static/media/slider-img.png": "/static/media/slider-img.209086f4da7be1316367.png",
+    "static/media/domestic.png": "/static/media/domestic.ca5fe3cfef6b4ad0c5cc.png",
+    "static/media/cosmetic.png": "/static/media/cosmetic.84d5043b18e80427f217.png",
+    "static/media/household.png": "/static/media/household.80470355d3811d3ed46d.png",
+    "static/media/for-babies.png": "/static/media/for-babies.fa3c26dbb3d1654c18c5.png",
+    "static/media/dishes.png": "/static/media/dishes.f4c8812904afed53a9b4.png",
+    "static/media/error.gif": "/static/media/error.42292aa12b6bc303ce99.gif",
+    "static/media/logo.svg": "/static/media/logo.2829b7d8823914a2dfc5d08c6df68cb2.svg",
+    "static/media/cart-logo.svg": "/static/media/cart-logo.e78dffd117de7364cb72e75040f958ce.svg",
+    "static/media/header-cart-logo.svg": "/static/media/header-cart-logo.a5d100d0100f4885c179d9d923ea75eb.svg",
+    "static/media/delete-logo.svg": "/static/media/delete-logo.52dd0ca00a7578f6d0c5.svg",
+    "static/media/share-logo.svg": "/static/media/share-logo.c7ea557134a8977c1abbf2213e507dea.svg",
+    "static/media/pack-liquid.svg": "/static/media/pack-liquid.d9c52e6d6c81b307b78595afe0c69cd5.svg",
+    "static/media/pack-box.svg": "/static/media/pack-box.07025a63d5ef1df6a921622fb9c62719.svg",
+    "static/media/map-document.svg": "/static/media/map-document.03549239851f173bd8fa443ae26a2c66.svg",
+    "static/media/map-location.svg": "/static/media/map-location.e63ca54aaaec903f682b29f4c4fe6be8.svg",
+    "static/media/catalog-logo.svg": "/static/media/catalog-logo.4756189f8fb2f4cdf0b38c581c7033d8.svg",
+    "index.html": "/index.html",
+    "static/media/search-logo.svg": "/static/media/search-logo.dc220b85ec983988f6f2629d99ba20b8.svg",
+    "static/media/modal-thanks.svg": "/static/media/modal-thanks.37f3bc180890ba89fe771c62d8d15901.svg",
+    "static/media/price-list-logo.svg": "/static/media/price-list-logo.cd6414b103f3e1bfa2bb3a60ede273a3.svg",
+    "static/media/download-logo.svg": "/static/media/download-logo.328b8a0054f394fba0bd.svg",
+    "static/media/next.svg": "/static/media/next.cf7603d8cdfcf33c3b04.svg",
+    "static/media/page-prev.svg": "/static/media/page-prev.8009929457bde0328f8f182170fd2c0f.svg",
+    "static/media/prev.svg": "/static/media/prev.8009929457bde0328f8f.svg",
+    "static/media/page-next.svg": "/static/media/page-next.93ba4abe5846a231d455ec0417dd0a4b.svg",
+    "static/media/arrow-more.svg": "/static/media/arrow-more.260e242d67fc23d29ab0.svg",
+    "main.89fc971c.css.map": "/static/css/main.89fc971c.css.map",
+    "main.b6ef2787.js.map": "/static/js/main.b6ef2787.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.89fc971c.css",
+    "static/js/main.b6ef2787.js"
+  ]
+}

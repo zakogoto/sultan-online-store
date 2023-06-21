@@ -6,7 +6,7 @@ export const initialState: IFilter = {
   manufacturers: [],
   minPrice: null,
   maxPrice: null,
-  isClearFilter: false
+  isClearFilter: true
 };
 
 const filtersSlice = createSlice({
@@ -15,6 +15,7 @@ const filtersSlice = createSlice({
   reducers: {
     addFilter: (state:IFilter, action: PayloadAction<{type: string, value: string}>) => {
         state[action.payload.type === 'brand' ? 'brands' : 'manufacturers'].push(action.payload.value);
+        state.isClearFilter = false
     },
     removeFilter: (state: IFilter, action: PayloadAction<{type: string, value: string}>) => {
         const filterKey = action.payload.type === 'brand' ? 'brands' : 'manufacturers';
@@ -22,9 +23,11 @@ const filtersSlice = createSlice({
     },
     setMinPrice: (state:IFilter, action: PayloadAction<number>) => {
       state.minPrice = action.payload === 0 ? null : action.payload;
+      state.isClearFilter = false
     },
     setMaxPrice: (state:IFilter, action: PayloadAction<number>) => {
       state.maxPrice = action.payload === 999999 ? null : action.payload;
+      state.isClearFilter = false
     },
     clearFilter: (state: IFilter) => {
         state.brands = []
